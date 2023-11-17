@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regsiter form</title>
+</head>
+<body>
+    <form method="post" action="register">
+
+        {% csrf_token %}
+        <div  style="border: 2px block;">
+            <h3>Register Form</h3>
+        <label for="firstname">FirstName : </label>
+        <input type="text" id="firstname" name="firstname" required>
+<br><br>
+        <label for="lastname">Lastname : </label>
+        <input type="text" id="lastname" name="lastname" >
+<br><br>
+        <label for="email">Email : </label>
+        <input type="email" id="email" name="email" required>
+<br><br>
+        <label for="password">Passwiord</label>
+    <input type="password" name="password" id="password" title="password must be min 8 characters 1 uppercase, 1 number, minlength 8">
+    <br><br>
+        <label for="Confirm password">Passwiord</label>
+    <input type="password" name="cmpassword" id="cmpassword" title="password must be min 8 characters 1 uppercase, 1 number, minlength 8">
+        <!-- pattern="^(?=-.*[A-Za])(?=-.)" -->
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</div>
+<br>
+<a href="login">login</a>
+</body>
+</html>
